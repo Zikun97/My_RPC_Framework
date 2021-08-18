@@ -1,0 +1,16 @@
+package open.zikun.rpc.annotation;
+
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
+
+/**
+ * 服务扫描的基础包
+ */
+
+@Target(value = ElementType.TYPE)
+@Retention(value = RetentionPolicy.RUNTIME)
+public @interface ServiceScan {
+    public String value() default "";
+}
